@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A game for you 🎮</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <div class="wrapper">
+
+    <!-- SCREEN 0: Level 1 -->
+    <div id="s0" class="screen active">
+      <div class="chip">for your eyes only</div>
+      <div class="icon-wrap">🔐</div>
+      <h1>This game is locked</h1>
+      <p class="sub">Someone made this especially for you. Crack the codes to see what's inside.</p>
+      <div class="progress">
+        <div class="progress-dot current"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Level 1 — Enter the code</div>
+        <input type="text" id="code0" placeholder="what year?" autocomplete="off"/>
+        <p class="hint">hint: think of someone's birth year</p>
+        <div class="error-msg" id="err0"></div>
+      </div>
+      <button class="btn" onclick="check0()">Unlock ↗</button>
+    </div>
+
+    <!-- SCREEN 1: Level 2 -->
+    <div id="s1" class="screen">
+      <div class="chip">level 2 of 2</div>
+      <div class="icon-wrap">🔓</div>
+      <h1>Almost there...</h1>
+      <p class="sub">One more lock. You're doing brilliantly.</p>
+      <div class="progress">
+        <div class="progress-dot done"></div>
+        <div class="progress-dot current"></div>
+        <div class="progress-dot"></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Level 2 — Enter the code</div>
+        <input type="text" id="code1" placeholder="whose last name?" autocomplete="off"/>
+        <p class="hint">hint: think about who sent you this link</p>
+        <div class="error-msg" id="err1"></div>
+      </div>
+      <button class="btn" onclick="check1()">Open ↗</button>
+    </div>
+
+    <!-- SCREEN 2: The Question -->
+    <div id="s2" class="screen">
+      <div class="chip">you made it 🎉</div>
+      <div class="progress">
+        <div class="progress-dot done"></div>
+        <div class="progress-dot done"></div>
+        <div class="progress-dot current"></div>
+      </div>
+      <div class="coffee-row">☕</div>
+      <h1>Hey Nebula Gamora</h1>
+      <p class="sub">You cracked both codes — which honestly just proves what I already knew.<br>You're clever. So here's the real question...</p>
+      <div class="divider"></div>
+      <div class="big-text">Would you like to grab coffee with me?</div>
+      <div class="divider"></div>
+      <div class="choices">
+        <button class="btn btn-yes" onclick="sayYes()">Yes, obviously 🎉</button>
+        <button class="btn btn-ghost" onclick="sayYes()">Also yes 😂</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 3: Yes! -->
+    <div id="s3" class="screen">
+      <div class="sparkle-row">✨ ☕ ✨</div>
+      <div class="chip">mission accomplished</div>
+      <div class="icon-wrap" style="box-shadow: 0 0 30px rgba(110,200,154,0.4); border-color: rgba(110,200,154,0.4);">🎊</div>
+      <h1>She said yes!!</h1>
+      <p class="sub" style="font-style:normal; color: var(--muted);">That's the only right answer.<br>Coffee is going to be great.</p>
+      <div class="divider"></div>
+      <p class="sub" style="font-size:13px;">— game complete —</p>
+    </div>
+
+  </div>
+
+  <footer>made with intention</footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
