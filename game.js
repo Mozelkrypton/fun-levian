@@ -12,7 +12,7 @@ function check0() {
 
 function check1() {
   const val = document.getElementById('code1').value.trim().toLowerCase();
-  if (val === 'levian') {
+  if (val === 'amos') {
     go('s2');
   } else {
     shake('code1');
