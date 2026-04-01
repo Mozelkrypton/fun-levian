@@ -1,6 +1,6 @@
 function check0() {
   const val = document.getElementById('code0').value.trim().toLowerCase().replace(/\s+/g, '');
-  const valid = ['1994', 'feb51994', 'february51994', '05021994', '02051994', 'feb5'];
+  const valid = ['496', 'feb5', 'february5', '0502', '0205', 'feb5'];
   if (valid.includes(val)) {
     go('s1');
   } else {
@@ -12,7 +12,7 @@ function check0() {
 
 function check1() {
   const val = document.getElementById('code1').value.trim().toLowerCase();
-  if (val === 'groot') {
+  if (val === 'Levian') {
     go('s2');
   } else {
     shake('code1');
